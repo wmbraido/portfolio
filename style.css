@@ -1,0 +1,223 @@
+/* Reset básico e estilo base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu fixo no topo */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #004080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, text-decoration 0.3s;
+}
+
+nav a:hover {
+  background-color: #0066cc;
+  text-decoration: none;
+}
+
+/* Espaçamento para evitar que o conteúdo fique atrás do menu fixo */
+.content {
+  max-width: 1000px;
+  margin: 90px auto 60px; /* topo maior para menu fixo + margem inferior */
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  min-height: calc(100vh - 130px); /* altura mínima da área visível */
+}
+
+/* Títulos */
+h1, h2 {
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.8em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+/* Texto geral */
+p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Seção de boas-vindas */
+.bem-vindo {
+  text-align: center;
+  background-color: #e6f0ff;
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.bem-vindo h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.bem-vindo p {
+  font-size: 1.4em;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Imagens */
+.content img,
+.bem-vindo img {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.content img:hover,
+.bem-vindo img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* Container para imagens lado a lado */
+.content > div {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #004080;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0066cc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+  /* Nav vertical e links com espaçamento maior */
+  nav {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 8px 0;
+    font-size: 1.2em;
+    padding: 10px 20px;
+  }
+
+  /* Container das imagens fica em coluna */
+  .content > div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Imagens ocupam quase toda a largura no celular */
+  .content > div img {
+    width: 90%;
+  }
+
+  /* Ajuste de padding para conteúdo */
+  .content {
+    margin: 110px 15px 40px;
+    padding: 15px;
+    min-height: auto;
+  }
+
+  /* Títulos menores para mobile */
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  /* Formulário largura 100% */
+  form {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+}
+
+/* Para telas bem pequenas (exemplo: celulares muito pequenos) */
+@media (max-width: 400px) {
+  nav a {
+    font-size: 1em;
+    padding: 8px 10px;
+    margin: 5px 0;
+  }
+}
