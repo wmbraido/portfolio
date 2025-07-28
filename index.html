@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio - Início</title>
+  <title>Portfólio - MIL Soluções Empresariais</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre mim</a>
-    <a href="formacao.html">Formação</a>
-    <a href="empresas.html">Empresas</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-  <div class="content">
-   <section class="bem-vindo">
-    <img src="./imagens/minha logo.png" width="200">
-  <h1>Seja muito bem-vindo a MIL Soluções Empresariais! </h1>
-  <p>
-    Prazer, eu sou <strong>Wenderson</strong> — especialista com mais de 21 anos de experiência no setor fiscal. <br />
-    Aqui você vai conhecer minha trajetória, formações, experiências profissionais e tudo o que posso oferecer para agregar valor à sua empresa.
-  </p>
-  <p>
-    Navegue pelo menu acima e descubra como posso te ajudar com soluções práticas, conhecimento técnico e comprometimento!
-  </p>
-</section>
-      <div style="display: flex; justify-content: center; gap: 40px; margin-top: 20px;">
-               <img src="./imagens/speedfiscal.png" width="400">
-                <img src="./imagens/sped-contribuicoes.jpg" width="450">
-      </div>
-     
-       
-    
+  <header>
+  <div class="container header-content">
+    <img src="./imagens/minha logo.png" alt="Logo MIL Soluções Empresariais" class="logo">
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html" class="ativo">Início</a></li>
+        <li><a href="sobre.html">Sobre mim</a></li>
+        <li><a href="formacao.html">Formação</a></li>
+        <li><a href="empresas.html">Empresas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
+
+
+  <main class="hero">
+    <section class="intro container">
+      <h1>Seja muito bem-vindo à <span class="destaque">MIL Soluções Empresariais</span>!</h1>
+      <p>
+        Prazer, eu sou <strong>Wenderson</strong> — especialista com mais de 21 anos de experiência no setor fiscal.
+        Aqui você vai conhecer minha trajetória, formações, experiências profissionais e tudo o que posso oferecer para agregar valor à sua empresa.
+      </p>
+      <p>
+        Navegue pelo menu acima e descubra como posso te ajudar com soluções práticas, conhecimento técnico e comprometimento!
+      </p>
+    </section>
+
+    <section class="imagens-destaque container">
+      <img src="./imagens/speedfiscal.png" alt="Sistema Speed Fiscal" class="imagem-destaque">
+      <img src="./imagens/sped-contribuicoes.jpg" alt="Sped Contribuições" class="imagem-destaque">
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Wenderson Nenen Braido • MIL Soluções Empresariais</p>
+    </div>
+  </footer>
 </body>
-</html>
 </html>
