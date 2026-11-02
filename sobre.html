@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mim - MIL Soluções Empresariais</title>
+  <meta name="description" content="Consultoria fiscal com mais de 21 anos de experiência: SPED, ERP, estoque e precificação." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" aria-label="MIL Soluções Empresariais"><img src="./imagens/mil-logo.png" alt="Logo MIL Soluções Empresariais" class="logo" /></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+      <nav id="nav"><ul class="menu"><li><a href="index.html">Início</a></li><li><a href="sobre.html" class="ativo">Sobre mim</a></li><li><a href="formacao.html">Formação</a></li><li><a href="empresas.html">Empresas</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><h1>Sobre mim</h1><p>Mais de duas décadas de experiência na área fiscal.</p></div></section>
+    <section class="page-body container">
+      <div class="about">
+        <div class="photo-wrap reveal"><img src="./imagens/foto-wenderson.webp" alt="Wenderson Marcelino Braido" /></div>
+        <div class="reveal">
+          <p>Sou <strong>Wenderson</strong>, profissional com mais de 21 anos de experiência na área fiscal. Durante essa trajetória, desenvolvi uma visão estratégica voltada para o resultado e a conformidade tributária.</p>
+          <p>Ao longo da carreira, atuei em empresas de diversos portes e segmentos, sempre buscando agregar valor com soluções práticas, conhecimento técnico e comprometimento com resultados.</p>
+          <p>Minha missão é contribuir com as empresas através de consultoria especializada, treinamento de equipes e implementação de boas práticas fiscais.</p>
+          <div class="pills"><span>SPED Fiscal</span><span>SPED Contribuições</span><span>Sintegra</span><span>ERP</span><span>Estoque</span><span>Precificação</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section container">
+      <div class="cta reveal">
+        <h2>Vamos conversar sobre a sua empresa?</h2>
+        <p>Consultoria fiscal, treinamento de equipes e boas práticas sob medida para o seu negócio.</p>
+        <div class="btns"><a class="btn btn-primary" href="https://wa.me/5527998155347" target="_blank" rel="noopener">Chamar no WhatsApp</a><a class="btn btn-ghost" href="contato.html">Outros contatos</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wenderson Marcelino Braido • MIL Soluções Empresariais</p>
+    </div>
+  </footer>
+  <script>
+    const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>

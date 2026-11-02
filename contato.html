@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - MIL Soluções Empresariais</title>
+  <meta name="description" content="Consultoria fiscal com mais de 21 anos de experiência: SPED, ERP, estoque e precificação." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" aria-label="MIL Soluções Empresariais"><img src="./imagens/mil-logo.png" alt="Logo MIL Soluções Empresariais" class="logo" /></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+      <nav id="nav"><ul class="menu"><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre mim</a></li><li><a href="formacao.html">Formação</a></li><li><a href="empresas.html">Empresas</a></li><li><a href="contato.html" class="ativo">Contato</a></li></ul></nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><h1>Entre em contato</h1><p>Quer saber mais ou agendar uma consultoria? Fale comigo pelos canais abaixo.</p></div></section>
+    <section class="page-body container">
+      <div class="contact-grid">
+        <article class="card contact-card reveal"><div class="icon">✉️</div><h3>E-mail</h3><a href="mailto:wmbraido@hotmail.com">wmbraido@hotmail.com</a></article>
+        <article class="card contact-card reveal"><div class="icon">📞</div><h3>Telefone</h3><a href="tel:+5527998155347">(27) 99815-5347</a></article>
+        <article class="card contact-card reveal"><div class="icon">💬</div><h3>WhatsApp</h3><a href="https://wa.me/5527998155347" target="_blank" rel="noopener">Clique para conversar</a></article>
+      </div>
+      <p style="text-align:center;margin-top:36px">Será um prazer conversar com você e entender como posso contribuir com a sua empresa!</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wenderson Marcelino Braido • MIL Soluções Empresariais</p>
+    </div>
+  </footer>
+  <script>
+    const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>

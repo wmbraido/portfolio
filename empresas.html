@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empresas - MIL Soluções Empresariais</title>
+  <meta name="description" content="Consultoria fiscal com mais de 21 anos de experiência: SPED, ERP, estoque e precificação." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" aria-label="MIL Soluções Empresariais"><img src="./imagens/mil-logo.png" alt="Logo MIL Soluções Empresariais" class="logo" /></a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span></button>
+      <nav id="nav"><ul class="menu"><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre mim</a></li><li><a href="formacao.html">Formação</a></li><li><a href="empresas.html" class="ativo">Empresas</a></li><li><a href="contato.html">Contato</a></li></ul></nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero"><div class="container"><h1>Experiência profissional</h1><p>Conheça as empresas por onde passei e os resultados que ajudei a construir.</p></div></section>
+    <section class="page-body container">
+      <div class="grid">
+        <article class="card reveal">
+          <h2>L&amp;A Distribuidora</h2><span class="tag">Gerente Administrativo</span>
+          <ul>
+            <li>Rotina do setor Fiscal: SPED Fiscal e Contribuições, controle de notas fiscais (entrada e saída) e inventário.</li>
+            <li>Gestão de estoque, análise de custos e precificação de mercadorias.</li>
+            <li>Planejamento e execução de promoções, apoiando o marketing.</li>
+            <li>Criação e envio de ofertas para o aplicativo da empresa.</li>
+            <li>Apoio no desenvolvimento e implantação do sistema ERP.</li>
+            <li>Suporte técnico na manutenção dos servidores.</li>
+            <li>Estrutura e equipamentos da equipe de vendas do atacado.</li>
+            <li>Gravação e divulgação de ofertas em rádios internas e externas.</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h2>Log Transportadora Ltda</h2><span class="tag">Auxiliar de Escritório</span>
+          <ul>
+            <li>Entrada e saída de NFe e geração do Sintegra.</li>
+            <li>Análise de custo de mercadoria e precificação.</li>
+            <li>Formação de carta e roteirização das cargas.</li>
+            <li>Faturamento e vendas a balcão.</li>
+          </ul>
+        </article>
+        <article class="card reveal">
+          <h2>MB5 Comércio Importação e Exportação</h2><span class="tag">Faturista</span>
+          <ul>
+            <li>Roteirização das cargas no ES, MG, BA e RJ.</li>
+            <li>Faturamento noturno e organização logística.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="container" style="padding-bottom:80px">
+      <div class="section-head reveal"><h2>Empresas do portfólio</h2><p>Marcas e empresas com as quais já trabalhei.</p></div>
+      <div class="logos"><div class="logo-tile  reveal"><div class="img"><img src="./imagens/amigao.jpeg" alt="Logo Amigão Embalagens" loading="lazy" /></div><p>Amigão Embalagens</p></div><div class="logo-tile cover reveal"><div class="img"><img src="./imagens/soares.jpg" alt="Logo Soares Atacadista" loading="lazy" /></div><p>Soares Atacadista</p></div><div class="logo-tile cover reveal"><div class="img"><img src="./imagens/kobal.png" alt="Logo Kobal Atacadista" loading="lazy" /></div><p>Kobal Atacadista</p></div><div class="logo-tile  reveal"><div class="img"><img src="./imagens/comercial-papelaria.png" alt="Logo Comercial Papelaria e Livraria" loading="lazy" /></div><p>Comercial Papelaria e Livraria</p></div><div class="logo-tile dark reveal"><div class="img"><img src="./imagens/comercial-mansur.jpg" alt="Logo Comercial Mansur Campo e Construção" loading="lazy" /></div><p>Comercial Mansur Campo e Construção</p></div></div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Wenderson Marcelino Braido • MIL Soluções Empresariais</p>
+    </div>
+  </footer>
+  <script>
+    const t=document.querySelector('.menu-toggle'),n=document.getElementById('nav');
+    t.addEventListener('click',()=>{const o=n.classList.toggle('open');t.setAttribute('aria-expanded',o)});
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
